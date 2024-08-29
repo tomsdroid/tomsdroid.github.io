@@ -1,0 +1,142 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+/* Fonts */
+
+/* BI Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* BI Icons */
+:root
+{
+  --hex-key: #3dcc84;
+  --yellow: #FFB531;
+  --hex-support: #43ade9;
+  --hex-primary: #008080;
+  --hex-bg: #eaeaea;
+  --text-light: #2b2b2b;
+  --text-dark: #f1f2f3;
+  --righteous: 'Righteous', sans-serif;
+  --firacode: 'Fira Code', monospace;
+  --poppins: 'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins);
+}
+
+/* Main Style */
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUPkXpQacOFQSsRtm05C-1t9Y1R7LaixGGxQ&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+}
+.main .container {
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+    background: linea-gradient(45deg, rgba(0, 0, 0, .3), rgba(255, 255, 255, .5));
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+}
+.main .container img.ic-construct {
+    width: 120px;
+    margin-bottom: 1.5em;
+}
+.main .container .ctx h1 {
+    color: var(--yellow);
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 3.3em;
+    font-family: var(--righteous);
+    text-transform: uppercase;
+}
+.main .container .ctx h1 span {
+    font-size: 1.5rem;
+    font-family: var(--poppins);
+    text-transform: none;
+    font-weight: 300;
+}
+.main .container .ctx .progress-bar {
+    width: 100%;
+    height: 15px;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    position: relative;
+}
+.main .container .ctx .progress-bar .fill-bar {
+    width: 75%;
+    height: 15px;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.main .container .ctx .progress-bar .fill-bar::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    left: 75%;
+    position: absolute;
+    background: whitesmoke;
+    transform: rotate(45deg);
+    border-radius: 3.5px;
+}
+.main .container .ctx .progress-bar span {
+    left: 75.8%;
+    top: 0;
+    position: absolute;
+    font-weight: 600;
+}
+.message {
+    color: var(--text-dark);
+    font-size: 1.3em;
+    line-height: 25px;
+    text-align: center;
+}
+
+/* Credits Style */
+#credits {
+    bottom: 25px;
+    color: var(--text-dark);
+    position: absolute;
+}
+#credits a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+@media (max-width: 576px){
+    .main {
+        padding: 20px;
+    }
+    .main .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+}
