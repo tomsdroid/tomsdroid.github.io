@@ -49,6 +49,7 @@
     z-index: 1;
     width: 90%;
     height: 90%;
+    padding: 20px;
     background: linea-gradient(45deg, rgba(0, 0, 0, .3), rgba(255, 255, 255, .5));
     display: flex;
     position: relative;
@@ -59,19 +60,28 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
 }
-.main .container img.ic-construct {
+.main .container .ctx img.ic-construct {
     width: 120px;
     margin-bottom: 1.5em;
+}
+.main .container .ctx {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .main .container .ctx h1 {
     color: var(--yellow);
     display: inline-flex;
     flex-direction: column;
-    font-size: 3.3em;
+    font-size: 4.3em;
     font-family: var(--righteous);
     text-transform: uppercase;
 }
 .main .container .ctx h1 span {
+    color: var(--text-dark);
     font-size: 1.5rem;
     font-family: var(--poppins);
     text-transform: none;
@@ -80,42 +90,59 @@
 .main .container .ctx .progress-bar {
     width: 100%;
     height: 15px;
-    margin: 30px 0;
-    background: rgba(255, 255, 255, .25);
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, .15);
     border-radius: 10px;
     position: relative;
+    box-shadow: inset 2.5px 5px 5px rgba(0, 0, 0, .2);
 }
 .main .container .ctx .progress-bar .fill-bar {
     width: 75%;
     height: 15px;
-    background: orange;
+    background: var(--yellow);
     display: flex;
     align-items: center;
     justify-content: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: inset 2.5px 5px 5px rgba(0, 0, 0, .2);
 }
 .main .container .ctx .progress-bar .fill-bar::before {
     content: '';
-    width: 40px;
-    height: 40px;
-    left: 75%;
+    width: 15px;
+    height: 15px;
+    left: 74%;
     position: absolute;
     background: whitesmoke;
     transform: rotate(45deg);
-    border-radius: 3.5px;
+    border-radius: 3.5%;
 }
 .main .container .ctx .progress-bar span {
-    left: 75.8%;
-    top: 0;
+    left: 73%;
+    color: rgba(255, 255, 255, .45);
+    font-size: .75em;
     position: absolute;
     font-weight: 600;
 }
+.main .container .ctx .contact {
+    color: var(--text-light);
+    padding: .75em 1.35em;
+    margin-top: 10px;
+    font-size: 1.25em;
+    background: var(--yellow);
+    font-family: var(--firacode);
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 .message {
     color: var(--text-dark);
-    font-size: 1.3em;
+    font-size: .75em;
     line-height: 25px;
     text-align: center;
+    margin-top: 10px;
 }
 
 /* Credits Style */
@@ -137,6 +164,12 @@
         width: 100%;
         height: 100%;
         position: relative;
+    }
+    .main .container .ctx {
+        width: 100%;
+    }
+    .main .container .ctx h1 {
+        font-size: 2.5em;
     }
     
 }
